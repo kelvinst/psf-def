@@ -6,19 +6,23 @@ import org.kelvinst.psf_def.builders.IScmInfoBuilder;
 import org.kelvinst.psf_def.builders.SvnInfoBuilder;
 
 public enum ProviderType {
-
-	CVS("org.eclipse.team.cvs.core.cvsnature", new CvsInfoBuilder()),
-	SVN("org.tigris.subversion.subclipse.core.svnnature", new SvnInfoBuilder()),
-	GIT("org.eclipse.egit.core.GitProvider", new GitInfoBuilder());
+	
+	// TODO make the get SCM and build reference 
+	CVS("org.eclipse.team.cvs.core.cvsnature", 
+		new CvsInfoBuilder()),
+	SVN("org.tigris.subversion.subclipse.core.svnnature",
+		new SvnInfoBuilder()),
+	GIT("org.eclipse.egit.core.GitProvider", 
+		new GitInfoBuilder());
 
 	private String id;
-	private IScmInfoBuilder scmInfoBuilder; 
+	private IScmInfoBuilder scmInfoBuilder;
 
 	private ProviderType(String id, IScmInfoBuilder scmInfoBuilder) {
 		this.id = id;
 		this.scmInfoBuilder = scmInfoBuilder;
 	}
-	
+
 	public String getId() {
 		return id;
 	}

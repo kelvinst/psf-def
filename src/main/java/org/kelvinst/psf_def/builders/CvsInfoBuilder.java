@@ -4,7 +4,7 @@ import org.apache.commons.lang.StringUtils;
 import org.kelvinst.psf_def.IScmInfo;
 import org.kelvinst.psf_def.ScmInfo;
 
-public class CvsInfoBuilder implements IScmInfoBuilder {
+public class CvsInfoBuilder extends ScmInfoBuilder {
 
 	@Override
 	public IScmInfo build(String reference) {
@@ -23,6 +23,11 @@ public class CvsInfoBuilder implements IScmInfoBuilder {
 		}
 		
 		return new ScmInfo(name, split[1], branch, path);
+	}
+
+	@Override
+	public String getReferenceFormat() {
+		return "{version},{repository},{path},{project-name},{branch}";
 	}
 
 }
