@@ -1,6 +1,6 @@
 package org.kelvinst.psf_def.builders;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.kelvinst.psf_def.IScmInfo;
 import org.kelvinst.psf_def.ScmInfo;
 

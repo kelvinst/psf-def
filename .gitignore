@@ -1,4 +1,7 @@
-target/
-/.classpath
-/.project
-/.settings
+# Maven files #
+target
+
+# Eclipse files #
+.classpath
+.project
+.settings
